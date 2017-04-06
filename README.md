@@ -21,6 +21,29 @@ The user "holding" the lock can release it using `/lock resource_name 0`.
 
 If the resource was already locked, the member requesting the lock will see the status of the resource (i.e. "locked by bruce for another 5 minutes") and no message will be shown to the whole channel.
 
+### Getting started on OS X
+```bash
+# Install Heroku CLI
+brew install heroku
+
+# Log in to Heroku
+heroku login
+
+# Create new app
+heroku create $APP_NAME
+
+# Add git remote
+heroku git:remote -a $APP_NAME
+
+# Deploy application
+git push heroku master
+```
+
+- Set up app on Slack ([here](http://li-group-locker.herokuapp.com/))
+- Install app to your team
+- Copy the resource token
+- heroku config:set SLACK_REQUEST_TOKEN=$TOKEN -a $APP_NAME
+
 ### TODO
 
 Things that will make single-site usage easier:
@@ -37,7 +60,7 @@ Things needed for wider Slack use:
 
 * [ ] Multi-tenancy: scoping resources by team
 * [ ] Better authentication/authorization
- 
+
 Other ideas (feature creep):
 
 * [x] Now that we're testing, add and configure Guard?
