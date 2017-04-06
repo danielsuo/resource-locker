@@ -45,7 +45,7 @@ git push heroku master
 heroku run bundle exec rake db:migrate
 ```
 
-- Set up app on Slack ([here](http://li-group-locker.herokuapp.com/))
+- Set up app on Slack ([here](https://api.slack.com/apps?new_app=1))
 - Install app to your team
 - Copy the resource token
 - heroku config:set SLACK_REQUEST_TOKEN=$TOKEN -a $APP_NAME
