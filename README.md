@@ -32,6 +32,9 @@ heroku login
 # Create new app
 heroku create $APP_NAME
 
+# Add postgres
+heroku addons:create heroku-postgresql:hobby-dev -a $APP_NAME
+
 # Add git remote
 heroku git:remote -a $APP_NAME
 
