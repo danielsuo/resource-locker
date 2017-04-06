@@ -21,7 +21,7 @@ The user "holding" the lock can release it using `/lock resource_name 0`.
 
 If the resource was already locked, the member requesting the lock will see the status of the resource (i.e. "locked by bruce for another 5 minutes") and no message will be shown to the whole channel.
 
-### Getting started on OS X
+### Deploying from OS X
 ```bash
 # Install Heroku CLI
 brew install heroku
@@ -43,6 +43,23 @@ git push heroku master
 - Install app to your team
 - Copy the resource token
 - heroku config:set SLACK_REQUEST_TOKEN=$TOKEN -a $APP_NAME
+
+### Developing on OS X
+```bash
+# Clone repository
+git clone https://github.com/danielsuo/resource-locker
+cd resource-locker
+
+# Install postgres
+brew install postgresql
+
+# Install bundler and install dependencies (may need sudo)
+gem install bundler
+bundle install
+
+# Run locally
+ruby lock.rb -p 3000
+```
 
 ### TODO
 
