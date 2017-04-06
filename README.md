@@ -43,6 +43,7 @@ git push heroku master
 - Install app to your team
 - Copy the resource token
 - heroku config:set SLACK_REQUEST_TOKEN=$TOKEN -a $APP_NAME
+- Copy ```./config/application-example.yml``` to ```./config/application.yml```
 
 ### TODO
 
