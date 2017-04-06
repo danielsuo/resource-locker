@@ -6,7 +6,6 @@ gem 'pg'
 gem 'rake'
 gem 'sinatra'
 gem 'sinatra-activerecord'
-gem 'zlib'
 
 group :test, :development do
   gem 'guard'
