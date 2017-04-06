@@ -40,6 +40,9 @@ heroku git:remote -a $APP_NAME
 
 # Deploy application
 git push heroku master
+
+# Create tables
+heroku run bundle exec rake db:migrate
 ```
 
 - Set up app on Slack ([here](http://li-group-locker.herokuapp.com/))
