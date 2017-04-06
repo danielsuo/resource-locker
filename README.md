@@ -63,6 +63,9 @@ brew install postgresql
 gem install bundler
 bundle install
 
+# Create tables
+bunde exec rake db:migrate
+
 # Run locally
 ruby lock.rb -p 3000
 ```
